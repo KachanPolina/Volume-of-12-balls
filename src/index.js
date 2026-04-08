@@ -1,5 +1,5 @@
 const FIRST_INNER_BALL_DIAMETER = 0.5;
-const FIRST_INNER_BALL_THIKNESS = 0.01;
+const FIRST_INNER_BALL_THIKNESS = 10 / 1000;
 let sumOfVolumes = 0;
 
 for (let i = 1; i <= 12; i++) {
