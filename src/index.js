@@ -1,14 +1,11 @@
 const FIRST_INNER_BALL_DIAMETER = 0.5;
-const FIRST_INNER_BALL_DIAMETER_CM = 0.5 * 100;
-let firstInnerBallRadious = FIRST_INNER_BALL_DIAMETER_CM / 2;
-let volumeOfBall = 0;
-let sumOfVolumeOfBalls = 0;
+const FIRST_INNER_BALL_THIKNESS = 0.01;
+let sumOfVolumes = 0;
 
 for (let i = 1; i <= 12; i++) {
-    volumeOfBall = 4/3 * Math.PI * Math.pow(firstInnerBallRadious, 3);
-    firstInnerBallRadious++;
-    sumOfVolumeOfBalls += volumeOfBall;
+    let innerDiameter = FIRST_INNER_BALL_DIAMETER + 2 * FIRST_INNER_BALL_THIKNESS * (i-2);
+    let volume = Math.PI * innerDiameter ** 3 / 6;
+    sumOfVolumes += volume;
 }
 
-let sumOfVolumeOfBallsCm = sumOfVolumeOfBalls / 100;
-console.log(sumOfVolumeOfBallsCm.toFixed(2));
+console.log(sumOfVolumes.toFixed(5));
